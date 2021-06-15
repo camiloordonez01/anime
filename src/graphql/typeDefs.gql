@@ -1,6 +1,7 @@
 type Query {
     anime(id: Int!): anime
     animes(type: String): [anime]!
+    import(id: Int): String
 }
 
 type anime {

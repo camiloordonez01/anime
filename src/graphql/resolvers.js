@@ -1,4 +1,4 @@
-const {animeAll, animeById} = require('../controllers/animes.controller');
+const {animeAll, animeById, csvImport} = require('../controllers/animes.controller');
 
 const resolvers = {
     Query: {
@@ -13,6 +13,11 @@ const resolvers = {
 
             const search = animeAll(type);
             return search;
+        },
+        import(_, args){
+            console.log('entro');
+            const r = csvImport();
+            return 'Ok';
         }
     }
 }

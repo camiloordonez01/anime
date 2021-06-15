@@ -1,0 +1,14 @@
+type Query {
+    anime(id: Int!): anime
+    animes(type: String): [anime]!
+}
+
+type anime {
+    id: Int!
+    name: String!
+    genre: [String]
+    type: String
+    episodes: Int!
+    ratiung: String
+    members: Int
+}
